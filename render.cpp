@@ -7,11 +7,11 @@
 
 void updateViewport(SDL_Renderer* renderer, int windowWidth, int windowHeight) {
     //match viewport to aspect ratio
-    int viewportWidth = ASPECT_RATIO.w;
-    int viewportHeight = ASPECT_RATIO.h;
+    long double viewportWidth = ASPECT_RATIO.w;
+    long double viewportHeight = ASPECT_RATIO.h;
     
     //fit viewport within window
-    bool viewportWidthclosest = (windowWidth - viewportWidth) / ASPECT_RATIO.w < (windowHeight - viewportHeight) / ASPECT_RATIO.h;
+    bool viewportWidthclosest = ( windowWidth / viewportWidth ) < ( windowHeight / viewportHeight );
     double closestViewportSide = viewportWidthclosest ? viewportWidth : viewportHeight;
     double matchingWindowSide = viewportWidthclosest ? windowWidth : windowHeight;
     double transformScale = matchingWindowSide / closestViewportSide;
