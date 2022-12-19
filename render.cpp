@@ -7,7 +7,6 @@
 
 void updateViewport(SDL_Renderer* renderer, int windowWidth, int windowHeight) {
     //match viewport to aspect ratio
-    int shortestWindowSide = (windowWidth < windowHeight) ? windowWidth : windowHeight;
     int viewportWidth = ASPECT_RATIO.w;
     int viewportHeight = ASPECT_RATIO.h;
     
