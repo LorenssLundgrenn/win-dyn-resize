@@ -1,6 +1,7 @@
 window dynamic resize
 C++ code for calculating the maximum size a viewport (render surface) of a
-certain aspect ratio will take within a resizable window.
+certain aspect ratio will take within a resizable window. (green rectangle
+represents the render surface the game draws to)
 you can change the target aspect ratio within includes\constants.hpp
 
 running the program
